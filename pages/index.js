@@ -11,7 +11,7 @@ function Navbar() {
 			style={{ backgroundColor: "#121212", color: "#F5F5F5" }}
 		>
 			<div className="text-4xl font-bold py-4">dimasriat —</div>
-			<div className="ml-auto py-4 cursor-pointer">
+			<div className="hidden ml-auto py-4 cursor-pointer">
 				<Image src={menuButton} />
 			</div>
 		</div>
@@ -36,8 +36,7 @@ function Jumbotron() {
 						className="p-8 mt-4 text-3xl lg:text-5xl font-bold text-white"
 					>
 						Hi there,
-						<br />
-						I am Dimas
+						<br />I am Dimas
 					</div>
 				</div>
 				<div className="w-full h-full flex items-end relative"></div>
@@ -84,9 +83,11 @@ function About() {
 					values, and driving innovations, then inspire others to do
 					the same.
 				</div>
-				<button className="mt-8 bg-blue-700 p-6 rounded-xl">
-					Download CV
-				</button>
+				<a href="/pdf/cv-dimas-riatmodjo.pdf" target={"_blank"}>
+					<button className="mt-8 bg-blue-700 p-6 rounded-xl">
+						Download CV
+					</button>
+				</a>
 			</div>
 		</div>
 	);
@@ -180,7 +181,9 @@ function WorkExperiences() {
 							</div>
 							<ul className="mt-4 mb-8 list-disc">
 								{exp.jobs.map((li, i2) => (
-									<li className="ml-4" key={i2}>{li}</li>
+									<li className="ml-4" key={i2}>
+										{li}
+									</li>
 								))}
 							</ul>
 						</div>
