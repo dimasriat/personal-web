@@ -165,7 +165,7 @@ function WorkExperiences() {
 						</div>
 						<div className="w-1/12">
 							<svg className={exp.fill}>
-								<circle cx="16" cy="16" r="16"></circle>
+								<circle cx="8" cy="8" r="8"></circle>
 							</svg>
 						</div>
 						<div className="w-full ">
@@ -272,7 +272,7 @@ function Contact() {
 				<div className="text-6xl text-blue-600 font-bold py-16 text-center">
 					Get in touch
 				</div>
-				<div className="text-5xl font-bold text-center">
+				<div className="text-3xl font-bold text-center">
 					<a
 						href="mailto:dimasriat@gmail.com"
 						className="hover:underline"
