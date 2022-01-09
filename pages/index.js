@@ -37,7 +37,7 @@ function Jumbotron() {
 					>
 						Hi there,
 						<br />
-						I'm Dimas
+						I am Dimas
 					</div>
 				</div>
 				<div className="w-full h-full flex items-end relative"></div>
@@ -155,8 +155,8 @@ function WorkExperiences() {
 				<div className="text-6xl text-green-400 font-bold py-32 text-center">
 					Experiences
 				</div>
-				{data.map((exp) => (
-					<div className="flex flex-row">
+				{data.map((exp, index) => (
+					<div className="flex flex-row" key={index}>
 						<div className="w-full hidden md:inline-block">
 							<div className="font-bold text-2xl">
 								{exp.company}
@@ -179,8 +179,8 @@ function WorkExperiences() {
 								{exp.date}
 							</div>
 							<ul className="mt-4 mb-8 list-disc">
-								{exp.jobs.map((li) => (
-									<li className="ml-4">{li}</li>
+								{exp.jobs.map((li, i2) => (
+									<li className="ml-4" key={i2}>{li}</li>
 								))}
 							</ul>
 						</div>
@@ -248,8 +248,8 @@ function Tools() {
 					Tools and Skills
 				</div>
 				<div className="grid lg:grid-cols-5 grid-cols-3 gap-4">
-					{data.map((item) => (
-						<div className="relative flex mx-auto">
+					{data.map((item, index) => (
+						<div className="relative flex mx-auto" key={index}>
 							<Image src={item.icon} width={240} height={240} />
 						</div>
 					))}
@@ -273,7 +273,12 @@ function Contact() {
 					Get in touch
 				</div>
 				<div className="text-5xl font-bold text-center">
-					<a href="mailto:dimasriat@gmail.com" className="hover:underline">dimasriat@gmail.com</a>
+					<a
+						href="mailto:dimasriat@gmail.com"
+						className="hover:underline"
+					>
+						dimasriat@gmail.com
+					</a>
 				</div>
 			</div>
 		</div>
